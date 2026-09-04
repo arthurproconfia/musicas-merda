@@ -1,7 +1,47 @@
 body {
-    background-color: plum;
+  background-color: plum;
+  margin: 0;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
+
 h1 {
-    color: hotpink;
-    font-size: 75px;
+  color: hotpink;
+  font-size: 75px;
+  text-align: center;
+  text-shadow: 3px 3px 0px darkviolet;
+  margin-bottom: 30px;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+  gap: 30px; /* espaçamento entre os vídeos */
+  max-width: 1200px;
+  margin: 0 auto; /* centraliza a grade */
+}
+
+.video-grid h2 {
+  grid-column: 1 / -1; /* faz o título ocupar as duas colunas */
+  color: white;
+  background: rgba(0,0,0,0.5);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 3px;
+}
+
+.video-grid iframe {
+  width: 100% !important; /* força ocupar toda a coluna */
+  height: auto;
+  aspect-ratio: 16/9; /* mantém proporção widescreen */
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
+}
+
+.video-grid iframe:hover {
+  transform: scale(1.03); /* efeito zoom ao passar o mouse */
 }
